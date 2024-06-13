@@ -1,16 +1,16 @@
 const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 const path = require("path");
-const dotenv = require("dotenv");
 
 // Load environment variables from .env file for local development
 if (process.env.NODE_ENV !== "production") {
-  dotenv.config({ path: path.resolve(__dirname, ".env") });
+  require("dotenv").config({path: path.resolve(__dirname, ".env")});
 }
 
 // Access environment variables
 const email = process.env.GMAIL_ADDRESS || functions.config().email.address;
-const password = process.env.GMAIL_APP_PASSWORD || functions.config().email.password;
+const password =
+    process.env.GMAIL_APP_PASSWORD || functions.config().email.password;
 
 if (!email || !password) {
   throw new Error("Missing email or password environment variables.");
@@ -38,9 +38,9 @@ exports.sendContactEmail = functions.https.onCall((data, context) => {
 
   return transporter.sendMail(mailOptions)
       .then(() => {
-        return { success: true };
+        return {success: true};
       })
       .catch((error) => {
-        return { success: false, error: error.toString() };
+        return {success: false, error: error.toString()};
       });
 });

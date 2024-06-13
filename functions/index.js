@@ -41,5 +41,6 @@ exports.sendContactEmail = functions.https.onCall((data, context) => {
         return { success: true };
       })
       .catch((error) => {
-        return { success: false, error: error.toString() };
-
+        return {success: false, error: error.toString()};
+      });
+});

@@ -6,39 +6,39 @@
     </div>
     <div>
       <label for="email">Email:</label><br>
-      <input type="text" id="email" name="email" v-model="formData.email" required><br>
+      <input type="email" id="email" name="email" v-model="formData.email" required><br>
     </div>
     <div>
-      <label for="message">Message</label><br>
-      <textarea rows="4" cols="50" id="message" v-model="formData.message" name="message" maxlength="500"></textarea>
+      <label for="message">Message:</label><br>
+      <textarea rows="4" id="message" v-model="formData.message" name="message" maxlength="500"></textarea>
     </div>
     <button type="submit">Submit</button>
   </form>
 </template>
 
 <script>
-// import { ref } from 'vue';
-
-import firebase from 'firebase/app';
-import 'firebase/functions';
+import { inject } from 'vue';
+import { httpsCallable } from 'firebase/functions';
 
 export default {
   data() {
     return {
-      name: '',
-      email: '',
-      message: '',
+      formData: {
+        name: '',
+        email: '',
+        message: '',
+      }
     };
+  },
+  setup() {
+    const functions = inject('functions');
+    return { functions };
   },
   methods: {
     async submitForm() {
-      const sendContactEmail = firebase.functions().httpsCallable('sendContactEmail');
+      const sendContactEmail = httpsCallable(this.functions, 'sendContactEmail');
       try {
-        const result = await sendContactEmail({
-          name: this.name,
-          email: this.email,
-          message: this.message,
-        });
+        const result = await sendContactEmail(this.formData);
         if (result.data.success) {
           alert('Email sent successfully');
         } else {
@@ -51,7 +51,6 @@ export default {
   }
 }
 </script>
-
 
 <style scoped>
 form {

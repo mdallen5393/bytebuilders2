@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import firebase from 'firebase/app';
-import 'firebase/functions';
+import { initializeApp } from 'firebase/app';
+import { getFunctions } from 'firebase/functions';
 
 const firebaseConfig = {
   apiKey: process.env.VUE_APP_API_KEY,
@@ -13,6 +13,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-createApp(App).mount('#app')
+// Get Firebase functions instance
+const functions = getFunctions(app);
+
+createApp(App).provide('functions', functions).mount('#app');

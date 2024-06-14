@@ -14,7 +14,7 @@ const password =
 
 if (!email || !password) {
   throw new Error("Missing email or password environment variables.");
-}
+}  
 
 console.log("Email: ", email);
 console.log("Password: ", password ? "Loaded" : "Not Loaded");

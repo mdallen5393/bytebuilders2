@@ -25,3 +25,90 @@
 [debug] [2024-06-14T15:13:11.711Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
 [debug] [2024-06-14T15:13:11.712Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
 [debug] [2024-06-14T15:13:11.727Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/adminSdkConfig [none]
+[debug] [2024-06-14T15:13:11.908Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/adminSdkConfig 200
+[debug] [2024-06-14T15:13:11.908Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/adminSdkConfig {"projectId":"bytebuilders2-6acb6","storageBucket":"bytebuilders2-6acb6.appspot.com"}
+[debug] [2024-06-14T15:13:11.932Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/sites 
+[debug] [2024-06-14T15:13:12.193Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/sites 200
+[debug] [2024-06-14T15:13:12.193Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/sites {"sites":[{"name":"projects/bytebuilders2-6acb6/sites/bytebuilders2-6acb6","defaultUrl":"https://bytebuilders2-6acb6.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-06-14T15:13:12.194Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/webApps/-/config [none]
+[debug] [2024-06-14T15:13:12.495Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/webApps/-/config 200
+[debug] [2024-06-14T15:13:12.495Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/webApps/-/config {"projectId":"bytebuilders2-6acb6","appId":"1:1061971976260:web:2a67683963e4890b5bdc11","storageBucket":"bytebuilders2-6acb6.appspot.com","apiKey":"AIzaSyASWjDGx4VfEwLwoD1eZR1WdVZhYk--c1k","authDomain":"bytebuilders2-6acb6.firebaseapp.com","messagingSenderId":"1061971976260"}
+[debug] [2024-06-14T15:13:12.500Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6 [none]
+[debug] [2024-06-14T15:13:12.608Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6 200
+[debug] [2024-06-14T15:13:12.609Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6 {"projectId":"bytebuilders2-6acb6","projectNumber":"1061971976260","displayName":"ByteBuilders2","name":"projects/bytebuilders2-6acb6","resources":{"hostingSite":"bytebuilders2-6acb6"},"state":"ACTIVE","etag":"1_ac2dd400-ffcd-4ab2-9af2-4b267e0af07e"}
+[info] i  hosting[bytebuilders2-6acb6]: Serving hosting files from: dist {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist\u001b[22m"}}
+[info] +  hosting[bytebuilders2-6acb6]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-06-14T15:13:12.635Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-06-14T15:13:12.635Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-06-14T15:13:12.635Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\matth\\.cache\\firebase\\emulators\\ui-v1.12.1\\server\\server.mjs"],"optionalArgs":[],"joinArgs":false,"shell":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\matth\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.12.1\\\\server\\\\server.mjs\"],\"optionalArgs\":[],\"joinArgs\":false,\"shell\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-06-14T15:13:12.871Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-06-14T15:13:12.871Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\matth\Documents\VSCode Projects\bytebuilders2\bytebuilders\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\matth\\Documents\\VSCode Projects\\bytebuilders2\\bytebuilders\\functions\" for Cloud Functions..."}}
+[debug] [2024-06-14T15:13:13.067Z] Validating nodejs source
+[debug] [2024-06-14T15:13:15.650Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0",
+    "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-06-14T15:13:15.651Z] Building nodejs source
+[debug] [2024-06-14T15:13:15.651Z] Failed to find version of module node: reached end of search path C:\Users\matth\Documents\VSCode Projects\bytebuilders2\bytebuilders\functions\node_modules
+[info] +  functions: Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-06-14T15:13:15.656Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-06-14T15:13:15.668Z] Found firebase-functions binary at 'C:\Users\matth\Documents\VSCode Projects\bytebuilders2\bytebuilders\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8785
+
+[info] Email:  itsmatthewallen1@gmail.com
+
+[info] Password:  Loaded
+
+[debug] [2024-06-14T15:13:17.498Z] Got response from /__/functions.yaml {"endpoints":{"sendContactEmail":{"platform":"gcfv1","labels":{},"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"callableTrigger":{},"entryPoint":"sendContactEmail"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: sendContactEmail. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: sendContactEmail."}}
+[info] +  functions[us-central1-sendContactEmail]: http function initialized (http://127.0.0.1:5001/bytebuilders2-6acb6/us-central1/sendContactEmail). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/bytebuilders2-6acb6/us-central1/sendContactEmail)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5000 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

@@ -1,18 +1,19 @@
 <template>
   <header>
-    <img alt="Byte Builders Logo by BumFam" src="../assets/logo.svg">
-    <h1>{{ title }}</h1>
+    <img alt="Byte Builders Logo by BumFam" src="../assets/logo (lightmode).svg">
+    <!-- <h1>{{ title }}</h1> -->
   </header>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue';
+// import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    const title = ref('ByteBuilders Homepage')
+    // const title = ref('ByteBuilders Homepage')
     return {
-      title,
+      // title,
     }
   },
 })

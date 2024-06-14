@@ -1,0 +1,27 @@
+[debug] [2024-06-14T15:13:11.280Z] ----------------------------------------------------------------------
+[debug] [2024-06-14T15:13:11.284Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\matth\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2024-06-14T15:13:11.285Z] CLI Version:   13.11.2
+[debug] [2024-06-14T15:13:11.285Z] Platform:      win32
+[debug] [2024-06-14T15:13:11.285Z] Node Version:  v20.9.0
+[debug] [2024-06-14T15:13:11.286Z] Time:          Fri Jun 14 2024 10:13:11 GMT-0500 (Central Daylight Time)
+[debug] [2024-06-14T15:13:11.286Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-14T15:13:11.489Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-14T15:13:11.490Z] > authorizing via signed-in user (itsmatthewallen1@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2024-06-14T15:13:11.508Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-14T15:13:11.509Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-14T15:13:11.509Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-06-14T15:13:11.516Z] [hub] writing locator at C:\Users\matth\AppData\Local\Temp\hub-bytebuilders2-6acb6.json
+[debug] [2024-06-14T15:13:11.553Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-14T15:13:11.554Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-06-14T15:13:11.554Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-06-14T15:13:11.561Z] defaultcredentials: writing to file C:\Users\matth\AppData\Roaming\firebase\itsmatthewallen1_gmail_com_application_default_credentials.json
+[debug] [2024-06-14T15:13:11.580Z] Setting GAC to C:\Users\matth\AppData\Roaming\firebase\itsmatthewallen1_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\matth\\AppData\\Roaming\\firebase\\itsmatthewallen1_gmail_com_application_default_credentials.json"}}
+[debug] [2024-06-14T15:13:11.582Z] > refreshing access token with scopes: []
+[debug] [2024-06-14T15:13:11.587Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-14T15:13:11.588Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-14T15:13:11.711Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-06-14T15:13:11.712Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-14T15:13:11.727Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bytebuilders2-6acb6/adminSdkConfig [none]

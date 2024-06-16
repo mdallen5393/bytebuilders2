@@ -1,7 +1,13 @@
 <template>
-  <header>
-    <img alt="Byte Builders Logo by BumFam" src="../assets/logo (lightmode).svg">
+  <header id="top">
+    <img class="header-img" alt="Byte Builders Logo by BumFam" src="../assets/logo flat (lightmode).svg">
     <!-- <h1>{{ title }}</h1> -->
+    <nav>
+      <a href="#top" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#initiatives" class="nav-link">Initiatives</a>
+      <a href="#contact" class="nav-link">Contact Us</a>
+    </nav>
   </header>
 </template>
 
@@ -23,11 +29,37 @@ export default defineComponent({
 header {
   background-color: #f8f9fa;
   padding: 1rem;
-  display: flex;
-  align-items: center;
 }
 
-img {
+header-img {
   height: 200px;
 }
+
+nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  margin-top: 50px;
+  width: 20%;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+  outline: 1px solid gray;
+}
+
+.nav-link:hover {
+  color: #05a2e5;
+  outline-color: #05a2e5;
+  background-color: #d9e9e9;
+}
+
+.nav-link:active {
+  color: #fb802a;
+  outline-color: #fb802a;
+  background-color: #ffe3cf;
+}
+
 </style>

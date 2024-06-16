@@ -1,10 +1,12 @@
 <template>
-  <div v-for="initiative in initiatives" :key="initiative.id" class="initiative">
-    <img :src="initiative.imageUrl" :alt="initiative.alt" />
-    <h2>{{ initiative.name }}</h2>
-    <h3>{{ initiative.blurb }}</h3>
-    <p>{{ initiative.description }}</p>
-    <a :href="initiative.link" target="_blank">Visit Website</a>
+  <div id="initiatives">
+    <div v-for="initiative in initiatives" :key="initiative.id" class="initiative">
+      <img :src="initiative.imageUrl" :alt="initiative.alt" />
+      <h2>{{ initiative.name }}</h2>
+      <h3>{{ initiative.blurb }}</h3>
+      <p>{{ initiative.description }}</p>
+      <a :href="initiative.link" target="_blank">Visit Website</a>
+    </div>
   </div>
 </template>
 

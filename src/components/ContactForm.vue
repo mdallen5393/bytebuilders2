@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submitForm">
+  <form @submit.prevent="submitForm" id="contact">
     <div>
       <label for="name">Name:</label><br>
       <input type="text" id="name" name="name" v-model="formData.name" required><br>
@@ -7,6 +7,10 @@
     <div>
       <label for="email">Email:</label><br>
       <input type="email" id="email" name="email" v-model="formData.email" required><br>
+    </div>
+    <div>
+      <label for="subject">Subject:</label><br>
+      <input type="text" id="subject" name="subject" v-model="formData.subject" required><br>
     </div>
     <div>
       <label for="message">Message:</label><br>
@@ -26,6 +30,7 @@ export default {
       formData: {
         name: '',
         email: '',
+        subject: '',
         message: '',
       }
     };

@@ -1,5 +1,4 @@
 <template>
-  <!-- <img alt="Byte Builders Logo by BumFam" src="./assets/logo.svg"> -->
   <IndexHeader />
   <InitiativesPanel />
   <ContactForm />

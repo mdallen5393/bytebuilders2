@@ -33,7 +33,7 @@ exports.sendContactEmail = functions.https.onCall((data, context) => {
     from: data.email,
     to: email,
     subject: `Contact form submission from ${data.name} (${data.email})`,
-    text: data.message,
+    text: `SUBJECT: ${ data.subject }\n\n${ data.message }`,
   };
 
   return transporter.sendMail(mailOptions)

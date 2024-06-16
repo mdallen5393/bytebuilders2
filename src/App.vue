@@ -1,18 +1,21 @@
 <template>
   <!-- <img alt="Byte Builders Logo by BumFam" src="./assets/logo.svg"> -->
   <IndexHeader />
+  <InitiativesPanel />
   <ContactForm />
 </template>
 
 <script>
-import ContactForm from './components/ContactForm.vue'
-import IndexHeader from './components/IndexHeader.vue'
+import ContactForm from './components/ContactForm.vue';
+import IndexHeader from './components/IndexHeader.vue';
+import InitiativesPanel from './components/InitiativesPanel.vue';
 
 export default {
   name: 'App',
   components: {
     ContactForm,
-    IndexHeader
+    IndexHeader,
+    InitiativesPanel,
   }
 }
 </script>

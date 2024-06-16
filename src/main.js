@@ -2,6 +2,8 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import { initializeApp } from 'firebase/app';
 import { getFunctions } from 'firebase/functions';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: process.env.VUE_APP_API_KEY,
@@ -18,4 +20,14 @@ const app = initializeApp(firebaseConfig);
 // Get Firebase functions instance
 const functions = getFunctions(app);
 
-createApp(App).provide('functions', functions).mount('#app');
+// Get Firestore instance
+const db = getFirestore(app);
+
+// Get Firebase Storage instance
+const storage = getStorage(app);
+
+createApp(App)
+    .provide('functions', functions)
+    .provide('db', db)
+    .provide('storage', storage)
+    .mount('#app')

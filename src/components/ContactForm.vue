@@ -1,22 +1,26 @@
 <template>
   <form @submit.prevent="submitForm" id="contact">
-    <div>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name" v-model="formData.name" required><br>
+    <div class="form-elements">
+      <div class="left">
+        <div class="name-field">
+          <label for="name">name</label><br>
+          <input placeholder="full name" type="text" id="name" name="name" v-model="formData.name" required><br>
+        </div>
+        <div class="email-field">
+          <label for="email">email</label><br>
+          <input placeholder="email address" type="email" id="email" name="email" v-model="formData.email" required><br>
+        </div>
+        <div class="subject-field">
+          <label for="subject">subject</label><br>
+          <input placeholder="subject" type="text" id="subject" name="subject" v-model="formData.subject" required><br>
+        </div>
+      </div>
+      <div class="message-field">
+        <!-- <label for="message">send us a message</label><br> -->
+        <textarea rows="4" id="message" v-model="formData.message" name="message" maxlength="500"></textarea>
+      </div>
     </div>
-    <div>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email" v-model="formData.email" required><br>
-    </div>
-    <div>
-      <label for="subject">Subject:</label><br>
-      <input type="text" id="subject" name="subject" v-model="formData.subject" required><br>
-    </div>
-    <div>
-      <label for="message">Message:</label><br>
-      <textarea rows="4" id="message" v-model="formData.message" name="message" maxlength="500"></textarea>
-    </div>
-    <button type="submit">Submit</button>
+    <button type="submit" class="submit-btn">Send Message</button>
   </form>
 </template>
 
@@ -59,7 +63,58 @@ export default {
 
 <style scoped>
 form {
-  background-color: blue;
+  background-color: darkblue;
+  color: white;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
 }
+
+.form-elements {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+textarea {
+  width: 100%;
+  max-width: 500px;
+  height: 95%;
+  max-height: 500px;
+}
+
+.submit-btn {
+  max-width: 300px;
+  margin: 16px;
+  width: 50%;
+  padding: 16px;
+  background-color: orange;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.24),0 8px 8px 0 rgba(0,0,0,0.19);
+}
+
+.submit-btn:active {
+  box-shadow:none;
+  border: 1px solid white;
+
+}
+
+input {
+  margin-top: 8px;
+}
+
 </style>

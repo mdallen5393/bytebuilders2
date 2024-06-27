@@ -2,12 +2,14 @@
   <IndexHeader />
   <InitiativesPanel />
   <ContactForm />
+  <IndexFooter />
 </template>
 
 <script>
 import ContactForm from './components/ContactForm.vue';
 import IndexHeader from './components/IndexHeader.vue';
 import InitiativesPanel from './components/InitiativesPanel.vue';
+import IndexFooter from './components/IndexFooter.vue';
 
 export default {
   name: 'App',
@@ -15,6 +17,7 @@ export default {
     ContactForm,
     IndexHeader,
     InitiativesPanel,
+    IndexFooter,
   }
 }
 </script>

@@ -2,6 +2,7 @@
   <header id="top">
     <img class="header-img" alt="Byte Builders Logo by BumFam" src="../assets/logo flat (lightmode).svg">
     <!-- <h1>{{ title }}</h1> -->
+    <h1>THIS IS A TEST</h1>
     <nav>
       <a href="#top" class="nav-link">Home</a>
       <a href="#about" class="nav-link">About</a>

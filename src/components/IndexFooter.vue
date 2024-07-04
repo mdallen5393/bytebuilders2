@@ -33,11 +33,11 @@ a {
 
 
 a:hover {
-  color: lightblue;
+  color: var(--color-blue);
 }
 
 a:active {
-  color: orange;
+  color: var(--color-orange);
 }
 
 </style>

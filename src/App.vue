@@ -30,4 +30,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+:root {
+  --color-orange: #fb802a;
+  --color-blue: #05a2e5;
+}
 </style>

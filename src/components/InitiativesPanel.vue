@@ -1,11 +1,13 @@
 <template>
   <div id="initiatives">
     <div v-for="initiative in initiatives" :key="initiative.id" class="initiative">
-      <img :src="initiative.imageUrl" :alt="initiative.alt" />
-      <h2>{{ initiative.name }}</h2>
-      <h3>{{ initiative.blurb }}</h3>
-      <p>{{ initiative.description }}</p>
-      <a :href="initiative.link" target="_blank">Visit Website</a>
+      <div class="initiative__content">
+        <img :src="initiative.imageUrl" :alt="initiative.alt" />
+        <h2>{{ initiative.name }}</h2>
+        <h3>{{ initiative.blurb }}</h3>
+        <p>{{ initiative.description }}</p>
+        <a :href="initiative.link" target="_blank">Visit Website</a>
+      </div>
     </div>
   </div>
 </template>
@@ -57,12 +59,53 @@ export default defineComponent({
 
 <style scoped>
   .initiative {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
     margin: 100px auto 100px auto;
     width: 50%;
   }
 
+  .initiative__content {
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    padding: 20px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px;
+  }
+
+  .initiative::before,
+  .initiative::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+  .initiative::before {
+    top: 30px;
+    left: 30px;
+    right: 0px;
+    bottom: 0px;
+    border: 5px solid var(--color-blue);
+    box-shadow: 2px 2px 2px black, inset 2px 2px 2px black;
+    transform: skew(-2deg);
+  }
+
+  .initiative::after {
+    top: 0px;
+    left: 0px;
+    right: 30px;
+    bottom: 30px;
+    border: 5px solid var(--color-orange);
+    box-shadow: 2px 2px 2px black, inset 2px 2px 2px black;
+    transform: skew(2deg);
+  }
+
   .initiative img {
     width: 15%;
+    min-width: 100px;
     height: auto;
   }
 </style>

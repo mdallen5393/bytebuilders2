@@ -57,8 +57,8 @@ nav {
 }
 
 .nav-link:active {
-  color: #fb802a;
-  outline-color: #fb802a;
+  color: var(--color-orange);
+  outline-color: var(--color-orange);
   background-color: #ffe3cf;
 }
 

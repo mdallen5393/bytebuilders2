@@ -1,5 +1,6 @@
 <template>
   <IndexHeader />
+  <AboutSection />
   <InitiativesPanel />
   <ContactForm />
   <IndexFooter />
@@ -10,6 +11,7 @@ import ContactForm from './components/ContactForm.vue';
 import IndexHeader from './components/IndexHeader.vue';
 import InitiativesPanel from './components/InitiativesPanel.vue';
 import IndexFooter from './components/IndexFooter.vue';
+import AboutSection from './components/AboutSection.vue';
 
 export default {
   name: 'App',
@@ -18,6 +20,7 @@ export default {
     IndexHeader,
     InitiativesPanel,
     IndexFooter,
+    AboutSection,
   }
 }
 </script>

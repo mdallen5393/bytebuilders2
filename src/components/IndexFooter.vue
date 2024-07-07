@@ -1,6 +1,9 @@
 <template>
   <footer id="bottom">
     <div><a href="#top">return to top</a></div>
+    <div>
+      <a href="https://www.flaticon.com/free-animated-icons/education" title="education animated icons"><small>Animated icons created by Freepik - Flaticon</small></a>
+    </div>
     <small>&copy; Matthew Allen 2024</small>
   </footer>
 </template>

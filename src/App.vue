@@ -1,7 +1,8 @@
 <template>
   <IndexHeader />
-  <AboutSection />
+  <HeroSection />
   <InitiativesPanel />
+  <AboutSection />
   <ContactForm />
   <IndexFooter />
 </template>
@@ -11,6 +12,7 @@ import ContactForm from './components/ContactForm.vue';
 import IndexHeader from './components/IndexHeader.vue';
 import InitiativesPanel from './components/InitiativesPanel.vue';
 import IndexFooter from './components/IndexFooter.vue';
+import HeroSection from './components/HeroSection.vue';
 import AboutSection from './components/AboutSection.vue';
 
 export default {
@@ -20,6 +22,7 @@ export default {
     IndexHeader,
     InitiativesPanel,
     IndexFooter,
+    HeroSection,
     AboutSection,
   }
 }
@@ -37,5 +40,9 @@ export default {
 :root {
   --color-orange: #fb802a;
   --color-blue: #05a2e5;
+}
+
+section {
+  margin: 50px;
 }
 </style>

@@ -1,10 +1,14 @@
 <template>
   <section id="about">
-    <div class="hero">
-      <a v-for="(card, index) in cards" :key="index" class="hero-card" :href="card.link">
-        <img class="animated_image" :alt="card.alt" :src="card.image" />
-        <h1 class="hero-text">{{ card.text }}</h1>
-      </a>
+    <h1 class="about-heading">Meet our founders</h1>
+    <div v-for="(panel, index) in panels" :key="index" class="about-panel">
+      <div class="about__content">
+        <img class="panel-img" :alt="panel.alt" :src="panel.image" />
+        <div class="panel-text">
+          <h2>Troy & DeEtta Bumgardner</h2>
+          <p>{{ panel.text }}</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -14,60 +18,76 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    const cards = [
-      { text: "Coding.", image: require("../assets/coding.gif"), alt: "animated coding image", },
-      { text: "Robotics.", image: require("../assets/robotic-arm.gif"), alt: "animated robotic arm image", },
-      { text: "Education.", image: require("../assets/book.gif"), alt: "animated book image", },
+    const panels = [
+      {
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nostrum voluptatem ducimus quod laborum reprehenderit aspernatur nulla soluta. Ea, vel.",
+        image: require("../assets/Troy-DeEtta.jpg"),
+        alt: "image of Troy and DeEtta",
+      },
     ];
-    return { cards };
+    return { panels };
   },
 });
 </script>
 
 <style scoped>
-.hero {
-  display: flex;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
-}
+  .about-heading {
+    font-size: 2em;
+    margin: 70px;
+  }
 
-.hero-card {
-  flex: 1; /* Ensures each card takes up equal space */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* For positioning the text over the image */
-}
+  .about-panel {
+    width: 50%;
+    margin: 0 auto 50px auto;
+    z-index: 1;
+    position: relative;
+  }
 
-.hero-card:hover .animated_image {
-  opacity: 0.4; /* Make the image slightly transparent */
-}
+  .about__content {
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-.hero-card:hover .hero-text {
-  font-size: 2.5rem;
-}
+  .about-panel::before,
+  .about-panel::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 10px;
+  }
+  .about-panel::before {
+    top: -20px;
+    left: -20px;
+    right: 20px;
+    bottom: 20px;
+    border: 5px solid var(--color-blue);
+    box-shadow: 2px 2px 2px black, inset 2px 2px 2px black;
+    transform: skew(2deg);
+  }
 
-.animated_image {
-  width: 100%;
-  height: auto; /* Maintains the aspect ratio */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-}
+  .about-panel::after {
+    top: 20px;
+    left: 20px;
+    right: -20px;
+    bottom: -20px;
+    border: 5px solid var(--color-orange);
+    box-shadow: 2px 2px 2px black, inset 2px 2px 2px black;
+    transform: skew(-2deg);
+  }
 
-h1.hero-text {
-  font-size: 2rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text */
-  margin: 0;
-  color: white; /* Ensure the text is visible over the image */
-  background: rgba(0, 0, 0, 0.6); /* Slightly transparent black background */
-  padding: 0.5em 1em; /* Padding around the text */
-  border-radius: 10px; /* Rounded corners */
-  transition: font-size 0.3s ease; /* Smooth transition for font size */
-  pointer-events: none; /* Ensure the text does not interfere with hover effects */
-}
+  .panel-img {
+    max-height: 200px;
+    padding: 12px;
+  }
+
+  .panel-text {
+    max-width: 50%
+  }
+
 </style>

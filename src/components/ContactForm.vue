@@ -1,5 +1,6 @@
 <template>
   <form @submit.prevent="submitForm" id="contact">
+    <h1>Contact us</h1>
     <div class="form-elements">
       <div class="left">
         <div class="name-field">

@@ -1,5 +1,6 @@
 <template>
   <div id="initiatives">
+    <h1 class="initiatives-heading">What we do</h1>
     <div v-for="initiative in initiatives" :key="initiative.id" class="initiative">
       <div class="initiative__content">
         <img :src="initiative.imageUrl" :alt="initiative.alt" />
@@ -39,7 +40,8 @@ export default defineComponent({
             };
           })
         );
-        initiatives.value = initiativeData;
+        // Sort initiatives based on the 'order' field
+        initiatives.value = initiativeData.sort((a, b) => a.order - b.order);
       } catch (e) {
         console.error('Error fetching documents: ', e);
       }
@@ -62,7 +64,7 @@ export default defineComponent({
     position: relative;
     padding: 20px;
     z-index: 1;
-    margin: 100px auto 100px auto;
+    margin: 0 auto 100px auto;
     width: 50%;
   }
 
@@ -104,8 +106,14 @@ export default defineComponent({
   }
 
   .initiative img {
-    width: 15%;
+    width: 20%;
     min-width: 100px;
     height: auto;
+  }
+
+  .initiatives-heading {
+    font-size: 2em;
+    margin: 50px;
+    margin-top: 100px;
   }
 </style>

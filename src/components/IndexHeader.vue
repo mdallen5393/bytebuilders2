@@ -4,8 +4,8 @@
     <!-- <h1>{{ title }}</h1> -->
     <nav>
       <a href="#top" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
       <a href="#initiatives" class="nav-link">Initiatives</a>
+      <a href="#about" class="nav-link">About</a>
       <a href="#contact" class="nav-link">Contact Us</a>
     </nav>
   </header>
@@ -48,6 +48,7 @@ nav {
   text-decoration: none;
   color: black;
   outline: 1px solid gray;
+  border-radius: 5px;
 }
 
 .nav-link:hover {

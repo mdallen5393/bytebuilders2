@@ -87,6 +87,7 @@ nav {
 
 .nav-links img {
   margin-bottom: 50px;
+  display: none;
 }
 
 .nav-link {
@@ -158,6 +159,11 @@ nav {
     flex-direction: column;
     width: 100%;
     margin-top: 100px;
+  }
+
+  .nav-links img {
+    margin-bottom: 50px;
+    display: flex;
   }
 
   .hamburger {

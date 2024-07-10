@@ -9,14 +9,11 @@
 </template>
 
 <script>
-// import { defineComponent, ref } from 'vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {
-    // const title = ref('ByteBuilders Homepage')
     return {
-      // title,
     }
   },
 })
@@ -41,6 +38,10 @@ a:hover {
 
 a:active {
   color: var(--color-orange);
+}
+
+a:focus {
+  background-color: blue;
 }
 
 </style>

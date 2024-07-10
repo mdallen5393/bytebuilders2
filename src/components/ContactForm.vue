@@ -1,28 +1,42 @@
 <template>
-  <form @submit.prevent="submitForm" id="contact">
-    <h1>Contact us</h1>
-    <div class="form-elements">
-      <div class="left">
-        <div class="name-field">
-          <label for="name">name</label><br>
-          <input placeholder="full name" type="text" id="name" name="name" v-model="formData.name" required><br>
+  <section id="contact">
+    <form @submit.prevent="submitForm">
+      <h1>Contact us</h1>
+      <div class="form-elements">
+        <div class="left">
+          <div class="name-field">
+            <label for="name">name</label><br>
+            <input 
+              placeholder="full name" type="text" id="name" name="name" v-model="formData.name" required
+              aria-labelledby="name" aria-required="true" aria-invalid="true" role="textbox"
+            ><br>
+          </div>
+          <div class="email-field">
+            <label for="email">email</label><br>
+            <input
+              placeholder="email address" type="email" id="email" name="email" v-model="formData.email" required
+              aria-labelledby="email" aria-required="true" aria-invalid="true" role="textbox"
+            ><br>
+          </div>
+          <div class="subject-field">
+            <label for="subject">subject</label><br>
+            <input
+              placeholder="subject" type="text" id="subject" name="subject" v-model="formData.subject" required
+              aria-labelledby="subject" aria-required="true" aria-invalid="true" role="textbox"
+            ><br>
+          </div>
         </div>
-        <div class="email-field">
-          <label for="email">email</label><br>
-          <input placeholder="email address" type="email" id="email" name="email" v-model="formData.email" required><br>
-        </div>
-        <div class="subject-field">
-          <label for="subject">subject</label><br>
-          <input placeholder="subject" type="text" id="subject" name="subject" v-model="formData.subject" required><br>
+        <div class="message-field">
+          <label for="message">message</label><br>
+          <textarea
+            rows="4" id="message" v-model="formData.message" name="message" maxlength="500" required
+            aria-labelledby="message" aria-required="true" aria-invalid="true" role="textbox"
+          ></textarea>
         </div>
       </div>
-      <div class="message-field">
-        <label for="message">message</label><br>
-        <textarea rows="4" id="message" v-model="formData.message" name="message" maxlength="500"></textarea>
-      </div>
-    </div>
-    <button type="submit" class="submit-btn">Send Message</button>
-  </form>
+      <button type="submit" class="submit-btn" aria-label="Submit" aria-live="polite">Send Message</button>
+    </form>
+  </section>
 </template>
 
 <script>
@@ -63,6 +77,11 @@ export default {
 </script>
 
 <style scoped>
+#contact {
+  margin-bottom: 0;
+  margin-top: 80px;
+}
+
 form {
   background-color: darkblue;
   color: white;
@@ -105,7 +124,8 @@ input {
   background-color: var(--color-orange);
   border: none;
   border-radius: 8px;
-  color: white;
+  color: black;
+  margin-top: 50px;
 }
 
 .submit-btn:hover {
@@ -117,13 +137,12 @@ input {
   border: 1px solid white;
 }
 
-input {
-  margin-top: 8px;
+.submit-btn:focus {
+  outline: 4px solid white;
 }
 
-
-.submit-btn {
-  margin-top: 50px;
+input {
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {

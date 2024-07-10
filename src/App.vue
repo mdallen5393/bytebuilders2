@@ -1,10 +1,14 @@
 <template>
-  <IndexHeader />
-  <HeroSection />
-  <InitiativesPanel />
-  <AboutSection />
-  <ContactForm />
-  <IndexFooter />
+  <div id="app">
+    <IndexHeader />
+    <main role="main">
+      <HeroSection />
+      <InitiativesPanel />
+      <AboutSection />
+      <ContactForm />
+    </main>
+    <IndexFooter />
+  </div>
 </template>
 
 <script>

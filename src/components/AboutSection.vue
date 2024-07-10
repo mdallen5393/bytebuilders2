@@ -1,5 +1,5 @@
 <template>
-  <section id="about">
+  <section id="about" aria-labelledby="about-heading">
     <h1 class="about-heading">Meet our founders</h1>
     <div v-for="(panel, index) in panels" :key="index" class="about-panel">
       <div class="about__content">

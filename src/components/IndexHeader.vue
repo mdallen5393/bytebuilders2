@@ -1,12 +1,13 @@
 <template>
-  <header id="top">
+  <header id="top" aria-label="Main Navigation">
     <img :src="logoSrc" :alt="logoAlt" class="header-img">
-    <button class="hamburger" @click="toggleMenu">
-      <i class="fas fa-bars"></i>
+    <button class="hamburger" @click="toggleMenu" :aria-expanded="isOpen.toString()" aria-controls="navigation-menu">
+      <span class="sr-only">Toggle navigation</span>
+      <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
-    <nav :class="{ open: isOpen }">
+    <nav :class="{ open: isOpen }" id="navigation-menu">
       <div class="nav-links">
-        <img src="../assets/logo (lightmode).svg" width="70%">
+        <img src="../assets/logo (lightmode).svg" width="70%" alt="Byte Builders Logo">
         <a href="#top" class="nav-link" @click="closeMenu">Home</a>
         <a href="#initiatives" class="nav-link" @click="closeMenu">Initiatives</a>
         <a href="#about" class="nav-link" @click="closeMenu">About</a>
@@ -124,6 +125,17 @@ nav {
   top: 1rem;
   font-size: 2rem;
   z-index: 200;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 @media (max-width: 768px) {

@@ -1,12 +1,13 @@
 <template>
   <header id="top">
     <img :src="logoSrc" :alt="logoAlt" class="header-img">
-    <button class="hamburger" @click="toggleMenu">
-      <i class="fas fa-bars"></i>
+    <button class="hamburger" @click="toggleMenu" aria-expanded="false" aria-controls="navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
-    <nav :class="{ open: isOpen }">
+    <nav :class="{ open: isOpen }" id="navigation" aria-hidden="true">
       <div class="nav-links">
-        <img src="../assets/logo (lightmode).svg" width="70%">
+        <img src="../assets/logo (lightmode).svg" width="70%" alt="Byte Builders Logo">
         <a href="#top" class="nav-link" @click="closeMenu">Home</a>
         <a href="#initiatives" class="nav-link" @click="closeMenu">Initiatives</a>
         <a href="#about" class="nav-link" @click="closeMenu">About</a>
@@ -17,7 +18,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 export default {
@@ -47,6 +48,13 @@ export default {
       updateLogo();
       window.addEventListener('resize', updateLogo);
     });
+
+    watch(isOpen, (newValue) => {
+      const button = document.querySelector('.hamburger');
+      const nav = document.getElementById('navigation');
+      if (button) button.setAttribute('aria-expanded', newValue);
+      if (nav) nav.setAttribute('aria-hidden', !newValue);
+    })
 
     return {
       isOpen,
@@ -124,6 +132,17 @@ nav {
   top: 1rem;
   font-size: 2rem;
   z-index: 200;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 @media (max-width: 768px) {

@@ -1,5 +1,5 @@
 <template>
-  <div id="initiatives">
+  <section id="initiatives">
     <h1 class="initiatives-heading">What we do</h1>
     <div v-for="initiative in initiatives" :key="initiative.id" class="initiative">
       <div class="initiative__content">
@@ -10,7 +10,7 @@
         <a :href="initiative.link" target="_blank">Visit Website</a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

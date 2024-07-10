@@ -77,4 +77,17 @@ h1.hero-text {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 10px;
+  }
+
+  .hero-paragraph {
+    width: 90%;
+    text-align: justify;
+  }
+}
 </style>

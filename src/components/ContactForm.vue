@@ -6,23 +6,35 @@
         <div class="left">
           <div class="name-field">
             <label for="name">name</label><br>
-            <input placeholder="full name" type="text" id="name" name="name" v-model="formData.name" required><br>
+            <input 
+              placeholder="full name" type="text" id="name" name="name" v-model="formData.name" required
+              aria-labelledby="name" aria-required="true" aria-invalid="true" role="textbox"
+            ><br>
           </div>
           <div class="email-field">
             <label for="email">email</label><br>
-            <input placeholder="email address" type="email" id="email" name="email" v-model="formData.email" required><br>
+            <input
+              placeholder="email address" type="email" id="email" name="email" v-model="formData.email" required
+              aria-labelledby="email" aria-required="true" aria-invalid="true" role="textbox"
+            ><br>
           </div>
           <div class="subject-field">
             <label for="subject">subject</label><br>
-            <input placeholder="subject" type="text" id="subject" name="subject" v-model="formData.subject" required><br>
+            <input
+              placeholder="subject" type="text" id="subject" name="subject" v-model="formData.subject" required
+              aria-labelledby="subject" aria-required="true" aria-invalid="true" role="textbox"
+            ><br>
           </div>
         </div>
         <div class="message-field">
           <label for="message">message</label><br>
-          <textarea rows="4" id="message" v-model="formData.message" name="message" maxlength="500"></textarea>
+          <textarea
+            rows="4" id="message" v-model="formData.message" name="message" maxlength="500" required
+            aria-labelledby="message" aria-required="true" aria-invalid="true" role="textbox"
+          ></textarea>
         </div>
       </div>
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="submit-btn" aria-label="Submit" aria-live="polite">Send Message</button>
     </form>
   </section>
 </template>
@@ -108,6 +120,7 @@ input {
   border: none;
   border-radius: 8px;
   color: white;
+  margin-top: 50px;
 }
 
 .submit-btn:hover {
@@ -119,13 +132,12 @@ input {
   border: 1px solid white;
 }
 
-input {
-  margin-top: 8px;
+.submit-btn:focus {
+  outline: 4px solid white;
 }
 
-
-.submit-btn {
-  margin-top: 50px;
+input {
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {

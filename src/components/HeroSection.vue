@@ -1,5 +1,5 @@
 <template>
-  <section id="about">
+  <section id="hero">
     <div class="hero">
       <a v-for="(card, index) in cards" :key="index" class="hero-card" :href="card.link">
         <img class="animated_image" :alt="card.alt" :src="card.image" />

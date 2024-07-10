@@ -121,13 +121,14 @@ input {
   margin-top: 8px;
 }
 
+
+.submit-btn {
+  margin-top: 50px;
+}
+
 @media (max-width: 768px) {
   .form-elements {
     flex-direction: column;
-  }
-
-  .submit-btn {
-    margin-top: 50px;
   }
 }
 

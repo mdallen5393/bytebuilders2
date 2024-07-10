@@ -6,6 +6,7 @@
     </button>
     <nav :class="{ open: isOpen }">
       <div class="nav-links">
+        <img src="../assets/logo (lightmode).svg" width="70%">
         <a href="#top" class="nav-link" @click="closeMenu">Home</a>
         <a href="#initiatives" class="nav-link" @click="closeMenu">Initiatives</a>
         <a href="#about" class="nav-link" @click="closeMenu">About</a>
@@ -62,7 +63,7 @@ export default {
 header {
   padding: 1rem;
   position: relative;
-  z-index: 1;
+  z-index: 100;
 }
 
 .header-img {
@@ -74,16 +75,22 @@ nav {
   display: flex;
   justify-content: space-around;
   position: relative;
+  z-index: 101;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
 }
 
+.nav-links img {
+  margin-bottom: 50px;
+}
+
 .nav-link {
-  margin-top: 50px;
+  margin-bottom: 50px;
   width: 20%;
   padding: 20px;
   text-decoration: none;
@@ -107,15 +114,15 @@ nav {
 .hamburger {
   display: none;
   cursor: pointer;
-  background: none;
-  border: none;
-  padding: 0;
+  background: white;
+  border: 1px solid lightgray;
+  padding: 5px 10px;
   margin: 0;
-  position: absolute;
+  position: fixed;
   right: 1rem;
   top: 1rem;
   font-size: 2rem;
-  z-index: 2;
+  z-index: 200;
 }
 
 @media (max-width: 768px) {
@@ -126,6 +133,7 @@ nav {
 
   .header-img {
     width: 70vw;
+    padding: 16px;
   }
 
   nav {

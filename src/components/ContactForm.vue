@@ -124,7 +124,7 @@ input {
   background-color: var(--color-orange);
   border: none;
   border-radius: 8px;
-  color: white;
+  color: black;
   margin-top: 50px;
 }
 

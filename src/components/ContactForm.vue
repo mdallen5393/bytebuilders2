@@ -77,6 +77,11 @@ export default {
 </script>
 
 <style scoped>
+#contact {
+  margin-bottom: 0;
+  margin-top: 80px;
+}
+
 form {
   background-color: darkblue;
   color: white;

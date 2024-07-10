@@ -43,7 +43,7 @@ export default {
 }
 
 section {
-  margin: 50px;
+  margin: 50px 0;
 }
 
 body, html {

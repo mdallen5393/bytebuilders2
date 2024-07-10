@@ -83,6 +83,9 @@ h1.hero-text {
     flex-direction: column;
     max-width: 400px;
     margin: 10px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-paragraph {

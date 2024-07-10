@@ -92,13 +92,22 @@ export default defineComponent({
   }
 
   @media (max-width: 768px) {
+    .about-heading {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 90%;
+    }
+
     .about__content {
       flex-direction: column;
+    }
+
+    .about__content p {
       padding: 20px;
     }
 
     .about-panel {
-      width: 100%;
+      width: 80%;
     }
 
     .panel-text {
@@ -112,6 +121,7 @@ export default defineComponent({
     .panel-img {
       width: 60%;
       max-height: 100%;
+      padding-top: 30px;
     }
   }
 

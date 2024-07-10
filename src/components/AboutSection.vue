@@ -61,6 +61,7 @@ export default defineComponent({
     z-index: -1;
     border-radius: 10px;
   }
+
   .about-panel::before {
     top: -20px;
     left: -20px;
@@ -87,7 +88,41 @@ export default defineComponent({
   }
 
   .panel-text {
-    max-width: 50%
+    width: 50%
+  }
+
+  @media (max-width: 768px) {
+    .about-heading {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 90%;
+    }
+
+    .about__content {
+      flex-direction: column;
+    }
+
+    .about__content p {
+      padding: 20px;
+    }
+
+    .about-panel {
+      width: 80%;
+    }
+
+    .panel-text {
+      width: 90%;
+    }
+
+    .panel-text p {
+      text-align: justify;
+    }
+
+    .panel-img {
+      width: 60%;
+      max-height: 100%;
+      padding-top: 30px;
+    }
   }
 
 </style>

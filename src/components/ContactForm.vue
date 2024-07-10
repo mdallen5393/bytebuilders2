@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="message-field">
-        <!-- <label for="message">send us a message</label><br> -->
+        <label for="message">message</label><br>
         <textarea rows="4" id="message" v-model="formData.message" name="message" maxlength="500"></textarea>
       </div>
     </div>
@@ -93,6 +93,10 @@ textarea {
   max-height: 500px;
 }
 
+input {
+  width: 100%;
+}
+
 .submit-btn {
   max-width: 300px;
   margin: 16px;
@@ -111,11 +115,21 @@ textarea {
 .submit-btn:active {
   box-shadow:none;
   border: 1px solid white;
-
 }
 
 input {
   margin-top: 8px;
+}
+
+
+.submit-btn {
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .form-elements {
+    flex-direction: column;
+  }
 }
 
 </style>

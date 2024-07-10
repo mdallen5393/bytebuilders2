@@ -1,5 +1,5 @@
 <template>
-  <section id="about">
+  <section id="hero">
     <div class="hero">
       <a v-for="(card, index) in cards" :key="index" class="hero-card" :href="card.link">
         <img class="animated_image" :alt="card.alt" :src="card.image" />
@@ -76,5 +76,21 @@ h1.hero-text {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    max-width: 400px;
+    margin: 10px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-paragraph {
+    width: 90%;
+    text-align: justify;
+  }
 }
 </style>

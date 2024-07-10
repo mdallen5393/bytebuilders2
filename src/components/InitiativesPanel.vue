@@ -116,4 +116,13 @@ export default defineComponent({
     margin: 50px;
     margin-top: 100px;
   }
+
+  @media (max-width: 768px) {
+    .initiative {
+      width: 80%;
+    }
+    .initiative__content p {
+      text-align: justify;
+    }
+  }
 </style>

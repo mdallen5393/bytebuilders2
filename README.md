@@ -83,6 +83,10 @@ npm run build
 firebase deploy
 ```
 
+### GitHub Actions <span style="color: red">*(known bug)*</span>
+
+Currently, GitHub Actions is set up to deploy upon merge or push to main.  However, this does not currently work (it deploys with errors).
+
 ## Contact Information
 
 ### ***Matthew Allen***

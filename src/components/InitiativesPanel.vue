@@ -6,8 +6,14 @@
         <img :src="initiative.imageUrl" :alt="initiative.alt" />
         <h2>{{ initiative.name }}</h2>
         <h3>{{ initiative.blurb }}</h3>
-        <p>{{ initiative.description }}</p>
-        <a :href="initiative.link" target="_blank" :aria-label="'Visit ' + initiative.name + ' website'">Visit Website</a>
+        <div v-html="getDescription(initiative)"></div>
+        <div class="more-less">
+          <a v-if="shouldShowMoreButton(initiative)" @click="toggleDescription(initiative.id)">
+            {{ initiative.showFullDescription ? '&#8648; See Less &#8648;' : '&#8650; See More &#8650;' }}
+          </a>
+        </div>
+        <br>
+        <button class="visit-button" :href="initiative.link" target="_blank" :aria-label="'Visit ' + initiative.name + ' website'">Visit Website</button>
       </div>
     </div>
   </section>
@@ -37,6 +43,7 @@ export default defineComponent({
               id: doc.id,
               ...data,
               imageUrl,
+              showFullDescription: false, // Field to track if the full description is shown
             };
           })
         );
@@ -52,8 +59,30 @@ export default defineComponent({
       fetchData();
     });
 
+    const toggleDescription = (id) => {
+      const initiative = initiatives.value.find((i) => i.id === id);
+      if (initiative) {
+        initiative.showFullDescription = !initiative.showFullDescription;
+      }
+    };
+
+    const getDescription = (initiative) => {
+      const fullDescription = initiative.description;
+      if (initiative.showFullDescription || fullDescription.length <= 500) {
+        return fullDescription;
+      }
+      return `${fullDescription.slice(0, 500)}...`;
+    };
+
+    const shouldShowMoreButton = (initiative) => {
+      return initiative.description.length > 500;
+    };
+
     return {
       initiatives,
+      toggleDescription,
+      getDescription,
+      shouldShowMoreButton,
     };
   },
 });
@@ -124,5 +153,32 @@ export default defineComponent({
     .initiative__content p {
       text-align: justify;
     }
+  }
+
+  .more-less {
+    color: var(--color-blue);
+    position: relative;
+  }
+
+  .visit-button {
+    width: 20%;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: none;
+  }
+
+  .visit-button:hover {
+    color: #05a2e5;
+    border-color: #05a2e5;
+    background-color: #d9e9e9;
+  }
+
+  .visit-button:active {
+    color: var(--color-orange);
+    border-color: var(--color-orange);
+    background-color: #ffe3cf;
   }
 </style>

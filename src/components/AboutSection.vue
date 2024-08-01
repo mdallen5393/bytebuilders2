@@ -5,7 +5,7 @@
       <div class="about__content">
         <img class="panel-img" :alt="panel.alt" :src="panel.image" />
         <div class="panel-text">
-          <h2>Troy & DeEtta Bumgardner</h2>
+          <h2>DeEtta & Troy Bumgardner</h2>
           <p>{{ panel.text }}</p>
         </div>
       </div>

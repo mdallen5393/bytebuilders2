@@ -160,6 +160,10 @@ export default defineComponent({
     position: relative;
   }
 
+  .more-less:hover {
+    cursor: pointer;
+  }
+
   .visit-button {
     width: 20%;
     padding: 20px;

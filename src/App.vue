@@ -4,7 +4,8 @@
     <main role="main">
       <HeroSection />
       <InitiativesPanel />
-      <AboutSection />
+      <NewsSection />
+      <FamilySection />
       <ContactForm />
     </main>
     <IndexFooter />
@@ -17,7 +18,8 @@ import IndexHeader from './components/IndexHeader.vue';
 import InitiativesPanel from './components/InitiativesPanel.vue';
 import IndexFooter from './components/IndexFooter.vue';
 import HeroSection from './components/HeroSection.vue';
-import AboutSection from './components/AboutSection.vue';
+import NewsSection from './components/NewsSection.vue';
+import FamilySection from './components/FamilySection.vue';
 
 export default {
   name: 'App',
@@ -27,7 +29,8 @@ export default {
     InitiativesPanel,
     IndexFooter,
     HeroSection,
-    AboutSection,
+    NewsSection,
+    FamilySection,
   }
 }
 </script>

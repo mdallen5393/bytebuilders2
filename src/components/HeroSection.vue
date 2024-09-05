@@ -6,7 +6,16 @@
         <h1 class="hero-text">{{ card.text }}</h1>
       </a>
     </div>
-    <p class="hero-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium temporibus, itaque nulla at eius molestiae voluptatum! Ducimus libero culpa quo? Aspernatur, delectus iusto, repudiandae et magnam non, sequi culpa eligendi adipisci dignissimos perferendis cumque voluptatum voluptate. Nihil velit quod minus.</p>
+    <p class="hero-paragraph">
+      ByteBuilders, LLC, was formed by DeEtta and Troy Bumgardner with the primary 
+      focus of bringing a Code Wiz franchise to the Northeast Oklahoma, and creating 
+      a legacy for their family.  With Troy as an IT professional, and just raising 
+      their own kids in an increasingly technology-dependent world, it seems crucial 
+      to influence the training, the SAFE and RESPONSIBLE training, of today's young 
+      tech-focused minds.
+      <br><br>That is the passion you will see behind the SCC.
+      <br>Read more about the owners <a href="#about">below</a>.
+    </p>
   </section>
 </template>
 
@@ -26,6 +35,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
 .hero {
   display: flex;
   width: 80%;
@@ -73,9 +83,12 @@ h1.hero-text {
 }
 
 .hero-paragraph {
-  width: 70%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
 }
 
 @media (max-width: 768px) {

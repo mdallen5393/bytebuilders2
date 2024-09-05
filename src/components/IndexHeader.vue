@@ -10,7 +10,8 @@
         <img src="../assets/logo (lightmode).svg" width="70%" alt="Byte Builders Logo">
         <a href="#top" class="nav-link" @click="closeMenu">Home</a>
         <a href="#initiatives" class="nav-link" @click="closeMenu">Initiatives</a>
-        <a href="#about" class="nav-link" @click="closeMenu">About</a>
+        <a href="#news" class="nav-link" @click="closeMenu">In the News</a>
+        <a href="#family" class="nav-link" @click="closeMenu">The Family</a>
         <a href="#contact" class="nav-link" @click="closeMenu">Contact Us</a>
       </div>
     </nav>
@@ -93,7 +94,7 @@ nav {
 
 .nav-link {
   margin-bottom: 50px;
-  width: 20%;
+  width: 13%;
   padding: 20px;
   text-decoration: none;
   color: black;

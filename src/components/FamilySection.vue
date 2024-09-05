@@ -1,11 +1,11 @@
 <template>
-  <section id="about" aria-labelledby="about-heading">
-    <h1 class="about-heading">Meet our founders</h1>
-    <div v-for="(panel, index) in panels" :key="index" class="about-panel">
-      <div class="about__content">
+  <section id="family" aria-labelledby="family-heading">
+    <h1 class="family-heading">Meet the Bumgardners</h1>
+    <div v-for="(panel, index) in panels" :key="index" class="family-panel">
+      <div class="family__content">
+        <h2>DeEtta & Troy Bumgardner</h2>
         <img class="panel-img" :alt="panel.alt" :src="panel.image" />
         <div class="panel-text">
-          <h2>DeEtta & Troy Bumgardner</h2>
           <p>{{ panel.text }}</p>
         </div>
       </div>
@@ -20,9 +20,9 @@ export default defineComponent({
   setup() {
     const panels = [
       {
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nostrum voluptatem ducimus quod laborum reprehenderit aspernatur nulla soluta. Ea, vel.",
+        text: "DeEtta is a Veteran of the U.S. Marine Corps. with an extensive career in logistics and transportation. Troy is a GISP (Geographic Information Systems Professional, GISCI) who works in IT for a local Fortune 500 natural gas pipeline company supporting their geographic information systems (GIS, ESRI's ArcGIS platform). Through their endeavors, they want to be part of YOUR tech journey.",
         image: require("../assets/Troy-DeEtta.jpg"),
-        alt: "image of Troy and DeEtta",
+        alt: "image of DeEtta and Troy Bumgardner",
       },
     ];
     return { panels };
@@ -31,38 +31,39 @@ export default defineComponent({
 </script>
 
 <style scoped>
-  .about-heading {
+  .family-heading {
     font-size: 2em;
     margin: 70px;
   }
 
-  .about-panel {
+  .family-panel {
     width: 50%;
     margin: 0 auto 50px auto;
     z-index: 1;
     position: relative;
   }
 
-  .about__content {
+  .family__content {
     position: relative;
     background-color: white;
     z-index: 1;
     box-shadow: 5px 5px 10px black;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
 
-  .about-panel::before,
-  .about-panel::after {
+  .family-panel::before,
+  .family-panel::after {
     content: '';
     position: absolute;
     z-index: -1;
     border-radius: 10px;
   }
 
-  .about-panel::before {
+  .family-panel::before {
     top: -20px;
     left: -20px;
     right: 20px;
@@ -72,7 +73,7 @@ export default defineComponent({
     transform: skew(2deg);
   }
 
-  .about-panel::after {
+  .family-panel::after {
     top: 20px;
     left: 20px;
     right: -20px;
@@ -88,25 +89,25 @@ export default defineComponent({
   }
 
   .panel-text {
-    width: 50%
+    width: 80%
   }
 
   @media (max-width: 768px) {
-    .about-heading {
+    .family-heading {
       margin-left: 0;
       margin-right: 0;
       max-width: 90%;
     }
 
-    .about__content {
+    .family__content {
       flex-direction: column;
     }
 
-    .about__content p {
+    .family__content p {
       padding: 20px;
     }
 
-    .about-panel {
+    .family-panel {
       width: 80%;
     }
 

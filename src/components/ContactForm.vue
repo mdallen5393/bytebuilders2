@@ -92,6 +92,10 @@ form {
   text-align: left;
 }
 
+form > h1 {
+  font-size: 32px;
+}
+
 .form-elements {
   display: flex;
   flex-direction: row;
@@ -103,6 +107,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
 }
 
 textarea {
@@ -110,10 +115,15 @@ textarea {
   max-width: 500px;
   height: 95%;
   max-height: 500px;
+  min-width: 200px;
+  margin-top: 8px;
 }
 
 input {
+  margin-top: 8px;
   width: 100%;
+  height: 1.5rem;
+  min-width: 200px;
 }
 
 .submit-btn {
@@ -142,7 +152,6 @@ input {
 }
 
 input {
-  margin-top: 8px;
 }
 
 @media (max-width: 768px) {

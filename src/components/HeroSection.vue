@@ -14,7 +14,7 @@
       to influence the training, the SAFE and RESPONSIBLE training, of today's young 
       tech-focused minds.
       <br><br>That is the passion you will see behind the SCC.
-      <br>Read more about the owners <a href="#about">below</a>.
+      <br>Read more about the owners <a href=#family>below</a>.
     </p>
   </section>
 </template>

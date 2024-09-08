@@ -13,7 +13,8 @@
           </a>
         </div>
         <br>
-        <button class="visit-button" :href="initiative.link" target="_blank" :aria-label="'Visit ' + initiative.name + ' website'">Visit Website</button>
+        <a class="visit-button" :href="initiative.link" target="_blank" :aria-label="'Visit ' + initiative.name + ' website'">Visit Website</a>
+
       </div>
     </div>
   </section>
@@ -172,7 +173,10 @@ export default defineComponent({
     border: 1px solid gray;
     border-radius: 5px;
     background: none;
+    display: block;
+    margin: auto auto;
   }
+
 
   .visit-button:hover {
     color: #05a2e5;
@@ -184,5 +188,11 @@ export default defineComponent({
     color: var(--color-orange);
     border-color: var(--color-orange);
     background-color: #ffe3cf;
+  }
+
+  @media (max-width: 768px) {
+    .visit-button {
+      width: 50%;
+    }
   }
 </style>

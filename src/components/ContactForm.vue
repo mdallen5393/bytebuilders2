@@ -151,8 +151,8 @@ input {
   outline: 4px solid white;
 }
 
-input {
-}
+/* input {
+} */
 
 @media (max-width: 768px) {
   .form-elements {

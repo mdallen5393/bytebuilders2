@@ -129,8 +129,8 @@ export default defineComponent({
       width: 90%;
     }
 
-    .panel-text p {
-      text-align: justify;
+    .panel-text h3 {
+      margin: 10px;
     }
 
     .panel-img {
